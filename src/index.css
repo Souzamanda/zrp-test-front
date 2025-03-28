@@ -1,8 +1,10 @@
 @import 'tailwindcss';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+@theme {
+  --color-primary: #e92727;
+  --color-secondary: #F8E8F8;
+  --color-border: #DEDEDE;
+
+  --font-display: 'Press Start 2P', cursive;
+  --font-body: 'Lato', sans-serif;
 }
