@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/pokemon' element={<Pokemon />} />
+        <Route path='/:pokemonName' element={<Pokemon />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
