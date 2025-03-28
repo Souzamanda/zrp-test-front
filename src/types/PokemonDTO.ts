@@ -1,5 +1,6 @@
 export interface PokemonDTO {
   name: string
+  id:string
   abilities: string[]
   types: string[]
   sprites: {

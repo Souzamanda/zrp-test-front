@@ -20,9 +20,10 @@ export default function Pokemon() {
         .then((response) => {
           if (response?.status === 200) {
             setResponseError('')
-            const { name, abilities, types, sprites } = response.data
+            const { name, id, abilities, types, sprites } = response.data
             setPokemonData({
               name: name || '',
+              id: id || '',
               abilities: abilities || [],
               types: types || [],
               sprites: {
@@ -79,7 +80,7 @@ export default function Pokemon() {
               </div>
 
               <h1 className='sm:text-3xl font-display text-center text-2xl'>
-                {pokemonData?.name.toLocaleUpperCase()}
+                <span className='sm:text-2xl text-xl'>n°{pokemonData.id} - </span>{pokemonData?.name.toLocaleUpperCase()}
               </h1>
 
               <div className='mb-5 mt-10 ml-5 flex flex-col sm:flex-row'>
