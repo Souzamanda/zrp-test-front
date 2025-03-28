@@ -46,8 +46,8 @@ export default function Pokemon() {
   }, [pokemonName])
 
   return (
-    <div className='bg-primary h-screen flex items-center justify-center flex-col gap-6'>
-      <div className='bg-border px-15 py-8 rounded-xl rounded-bl-[70px] shadow-lg w-2xl'>
+    <div className='bg-primary sm:h-screen h-full w-full flex items-center justify-center flex-col gap-6'>
+      <div className='bg-border px-15 py-8 rounded-xl rounded-bl-[70px] shadow-lg w-full max-w-2xl'>
         <div className='mb-7 flex justify-center gap-10'>
           <span className='w-4 h-4 bg-red-600 rounded-full' />
           <span className='w-4 h-4 bg-red-600 rounded-full' />
@@ -59,12 +59,12 @@ export default function Pokemon() {
             </div>
           ) : pokemonData ? (
             <>
-              <div className='flex justify-center gap-10 my-5'>
+              <div className='flex flex-col sm:flex-row justify-center gap-10 my-5'>
                 <div className='flex flex-col items-center'>
                   <img
                     src={pokemonData?.sprites.front_default}
                     alt={`${pokemonData?.name} normal`}
-                    className='scale-125'
+                    className='scale-125 sm:scale-100 w-32 h-32'
                   />
                   <p className='text-sm text-gray-500 mt-2'>Normal</p>
                 </div>
@@ -72,36 +72,36 @@ export default function Pokemon() {
                   <img
                     src={pokemonData?.sprites.front_shiny}
                     alt={`${pokemonData?.name} shiny`}
-                    className='scale-125'
+                    className='scale-125 sm:scale-100 w-32 h-32'
                   />
                   <p className='text-sm text-gray-500 mt-2'>Shiny</p>
                 </div>
               </div>
 
-              <h1 className='text-3xl font-display text-center'>
+              <h1 className='sm:text-3xl font-display text-center text-2xl'>
                 {pokemonData?.name.toLocaleUpperCase()}
               </h1>
 
-              <div className='mb-5 mt-10 ml-5 flex'>
-                <h2 className='font-body text-xl text-gray-500 flex-1'>
+              <div className='mb-5 mt-10 ml-5 flex flex-col sm:flex-row'>
+                <h2 className='font-body sm:text-xl text-lg text-gray-500 flex-1'>
                   Habilidades:
                 </h2>
                 <ul className='ml-3 flex-3'>
                   {pokemonData?.abilities.map((ability, index) => (
-                    <li key={index} className='font-body text-xl'>
+                    <li key={index} className='font-body sm:text-xl text-lg'>
                       › {ability}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className='my-5 ml-5 flex'>
-                <h2 className='font-body text-xl text-gray-500 flex-1'>
+              <div className='my-5 ml-5 flex flex-col sm:flex-row'>
+                <h2 className='font-body sm:text-xl text-lg text-gray-500 flex-1'>
                   Tipo:
                 </h2>
                 <ul className='ml-3 flex-3'>
                   {pokemonData?.types.map((type, index) => (
-                    <li key={index} className='font-body text-xl'>
+                    <li key={index} className='font-body sm:text-xl text-lg'>
                       › {type}
                     </li>
                   ))}
