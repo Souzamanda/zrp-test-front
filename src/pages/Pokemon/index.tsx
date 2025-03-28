@@ -34,8 +34,6 @@ export default function Pokemon() {
           }
         })
         .catch((error) => {
-          console.error('Erro ao buscar o Pokémon:', error)
-
           if (error.status === 404) {
             setResponseError(error.data)
             setPokemonData(undefined)
@@ -70,7 +68,7 @@ export default function Pokemon() {
             </div>
           ) : pokemonData ? (
             <>
-              <div className='flex flex-col sm:flex-row justify-center gap-10 my-5'>
+              <div className='flex flex-col sm:flex-row justify-center gap-10 mb-5 mt-2'>
                 <div className='flex flex-col items-center'>
                   <img
                     src={pokemonData?.sprites.front_default}

@@ -24,6 +24,12 @@ export default function BottomDisplay() {
           placeholder='Digite o nome ou o número do pokémon'
           onChange={(e) => setPokemonInput(e.target.value.toLocaleLowerCase())}
           value={pokemonInput}
+          onKeyDown={(e) => {
+            if(e.key === 'Enter') {
+              e.preventDefault();
+              onSubmit();
+            }
+          }}
         />
       </div>
       <div className='flex flex-col sm:flex-row gap-5 py-3 pr-3 '>
