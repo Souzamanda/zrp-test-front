@@ -12,7 +12,7 @@ export default function BottomDisplay() {
   }
 
   return (
-    <div className='bg-console w-2xl p-5 rounded-lg shadow-lg flex justify-between'>
+    <div className='bg-console w-2xl p-5 rounded-2xl shadow-lg flex justify-between'>
       <img
         src='/src/assets/arrowKeys.png'
         alt='joystick arrow keys'
